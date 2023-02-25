@@ -1,0 +1,169 @@
+.App {
+  text-align: center;
+  font-family: arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1{
+  font-size: 25px;
+  color: white;
+  word-break: normal;
+  margin-left: 22px;
+  margin-right: 22px;
+  z-index: 2;
+}
+
+.App .title {
+  color: black;
+  font-family:'Courier New', Courier, monospace;
+  margin-top: 3%;
+}
+.Menu {
+  width: 900px;
+  height: 500px;
+  border-radius: 10px;
+  background-image: url("https://data.designervn.net/2019/09/9676_3c1b0f70d986fd4e324cb43331b33b81.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.Menu:hover::before {
+  position: absolute;
+  content: "";
+  width: 900px;
+  height: 500px;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.Menu input, button {
+  width: 300px;
+  height: 50px;
+  margin: 5px;
+  border: 2px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+
+
+.questions {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.questions button {
+  font-size: 18px;
+  width: 300px;
+  height: 40px;
+  margin: 6px;
+}
+.questions button:hover {
+  background-color: #0fadf1;
+}
+.startButton {
+  width: 200px;
+  height: 40px;
+  margin: 30px;
+  border-style: inset;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: aquamarine;
+  cursor: pointer;
+}
+
+.Quiz {
+  width: 700px;
+  height: 500px;
+  border-radius: 10px;
+  background-image: url("https://data.designervn.net/2019/09/9676_3c1b0f70d986fd4e324cb43331b33b81.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+.Quiz:hover::before {
+  position: absolute;
+  content: "";
+  width: 700px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.3);
+  z-index: -1;
+}
+
+h2 {
+  font-size: 20px;
+}
+.Menu, .Quiz, .EndScreen h1 {
+  color: white;
+}
+
+.EndScreen {
+  width: 700px;
+  height: 500px;
+  border-radius: 10px;
+  background-image: url("https://data.designervn.net/2019/09/9676_3c1b0f70d986fd4e324cb43331b33b81.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+.EndScreen:hover::before {
+  position: absolute;
+  content: "";
+  width: 700px;
+  height: 500px;
+  background-color: rgba(0,0,0,0.3);
+  z-index: -1;
+}
+
+.EndScreen button {
+  font-size: 20px;
+  width: 200px;
+  border-style: inset;
+  margin-top: 50px;
+}
+.nextQuestion, .restart, .finish {
+  width: 150px;
+  height: 40px;
+  margin-top: 40px;
+  border-style: inset;
+}
+
+h3 {
+  color: #ffffff;
+}
+
+
+
+
+
+.options {
+  display: flex ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scoreNoti {
+  color: black;
+  font-size: 50px ;
+}
+
+.restart a {
+  color: black;
+  text-decoration: none;
+}
