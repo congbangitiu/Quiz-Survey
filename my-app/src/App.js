@@ -12,7 +12,11 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="title">DEPRESSION ASSESSMENT TEST</h1>
+      <button data-text="Awesome" class="title">
+      <span class="actual-text">DEPRESSION ASSESSMENT TEST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span class="hover-text" aria-hidden="true">&nbsp;DEPRESSION ASSESSMENT TEST&nbsp;</span>
+</button>
+      {/* <button className="title">DEPRESSION ASSESSMENT TEST</button> */}
       <GameStateContext.Provider
         value={{
           gameState,
