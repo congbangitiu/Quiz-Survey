@@ -12,25 +12,27 @@ function App() {
 
   return (
     <div className="App">
-      <button data-text="Awesome" class="title">
-      <span class="actual-text">DEPRESSION ASSESSMENT TEST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-      <span class="hover-text" aria-hidden="true">&nbsp;DEPRESSION ASSESSMENT TEST&nbsp;</span>
-</button>
-      {/* <button className="title">DEPRESSION ASSESSMENT TEST</button> */}
-      <GameStateContext.Provider
-        value={{
-          gameState,
-          setGameState,
-          userName,
-          setUserName,
-          score,
-          setScore,
-        }}
-      >
-        {gameState === "menu" && <Menu />}
-        {gameState === "playing" && <Quiz />}
-        {gameState === "finished" && <EndScreen />}
-      </GameStateContext.Provider>
+      <div className="frame">
+        <button data-text="Awesome" class="title">
+          <span class="actual-text">DEPRESSION ASSESSMENT TEST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span class="hover-text" aria-hidden="true">&nbsp;DEPRESSION ASSESSMENT TEST&nbsp;</span>
+        </button>
+        {/* <button className="title">DEPRESSION ASSESSMENT TEST</button> */}
+        <GameStateContext.Provider
+          value={{
+            gameState,
+            setGameState,
+            userName,
+            setUserName,
+            score,
+            setScore,
+          }}
+        >
+          {gameState === "menu" && <Menu />}
+          {gameState === "playing" && <Quiz />}
+          {gameState === "finished" && <EndScreen />}
+        </GameStateContext.Provider>
+      </div>
     </div>
   );
 }

@@ -328,8 +328,11 @@ function Menu() {
           {point && (
         <div className="Menu">
           <div className="scoreNoti">Your score is: {point}</div>
-          <button className="restart">
+          <button className="NextFinishRes restart">
             <a href="http://localhost:3000/">Restart</a>
+            <div class="icon">
+              <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></svg>
+            </div>
           </button>
         </div>
       )}
@@ -354,7 +357,7 @@ function Menu() {
       </button> */}
 
       {activeQuestion && (
-        <div>
+        <div className="content">
           <h1 className="questions">{activeQuestion?.title}</h1>
           {/* <h1 className={`${activeQuestion?.answer?.length > 4 ? "quiz_4ans" : "quiz_2ans"}`}>{activeQuestion?.title}/{mockData.length}</h1> */}
           <h2 className="quiz">Question {activeQuestion?.id+1}/{mockData.length}</h2>
@@ -393,16 +396,28 @@ function Menu() {
         }
       } */}
       {(data?.findIndex(item => item?.id === activeQuestion?.id) === activeQuestion?.id) ? 
-        (<button className="nextQuestion" onClick={() => handleActive()}>Next question</button>) 
+        (<button className="NextFinishRes" onClick={() => handleActive()}>Next question</button>) 
         : null}
         
       {(data?.length === mockData.length) ? (
       // <button onClick={calculation}>calculation</button>
-        <button className="finish" onClick={() => {
+        <button className="NextFinishRes" onClick={() => {
           setIsShownAns(true)
           calculation()
-        }}>Finish test</button>      
-      ) : (<button className="nextQuestion" onClick={() => handleActive()}>Next question</button>)}
+        }}>
+          Finish test
+          <div class="icon">
+            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></svg>
+          </div>
+        </button>      
+      ) : (
+        <button className="NextFinishRes"  onClick={() => handleActive()}>
+          Next question
+          <div class="icon">
+            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></svg>
+          </div>
+        </button>
+      )}
       
       {/* {point && (
         <div>
