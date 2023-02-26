@@ -223,6 +223,10 @@ h2 {
   right: 0.3em;
   transition: all 0.3s;
  }
+
+ .restart .icon {
+  margin-top: -1.7em;
+ }
  
  .NextFinishRes:hover .icon {
   width: calc(100% - 0.6em);
@@ -269,6 +273,7 @@ h3 {
   font-size: 17px;
   font-weight: 500;
   text-decoration: none;
+  z-index: 3;
 }
 .restart {
   margin-top: 5em;
