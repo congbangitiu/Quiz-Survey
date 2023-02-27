@@ -151,6 +151,9 @@ h2 {
   color: white;
 }
 
+.option {
+  background-color: red;
+}
 .EndScreen {
   width: 700px;
   height: 500px;

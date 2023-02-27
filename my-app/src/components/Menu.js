@@ -321,6 +321,17 @@ function Menu() {
   }
 
   console.log("activeQuestion",activeQuestion);
+  console.log("data", data);
+
+  const handleCheckDisable = () => {
+    const check = activeQuestion?.answer?.find(item => item?.id === data[activeQuestion?.id]?.child?.id)
+    // const test = data[activeQuestion?.id]?.child?.id
+
+    return check ? true : false
+  }
+
+  console.log("handleCheckDisable",handleCheckDisable());
+
   return (
     <>
       {isShownAns ? (
@@ -413,12 +424,16 @@ function Menu() {
           </div>
         </button>      
       ) : (
-        <button className="NextFinishRes"  onClick={() => handleActive()}>
-          Next question
-          <div class="icon">
-            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></svg>
-          </div>
-        </button>
+          <>
+            {handleCheckDisable() ? (
+              <button className="NextFinishRes"  onClick={() => handleActive()}>
+                Next question
+              <div class="icon">
+                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></svg>
+              </div>
+              </button>
+            ) : null}
+          </>
       )}
       
       {/* {point && (
